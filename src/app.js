@@ -10,9 +10,9 @@ export default class App extends Component {
 
   _renderCongrats() {
     return (
-      <div className="congrats">
+      <div className="overlay">
         <h1>Congrats!</h1>
-        You have reached 10! Now grab the code and play with it!
+        <p>You have reached 10! Now grab the code and play with it!</p>
         <ul>
           <li>
             <a href="http://github.com/catalinmiron/my-react-boilerplate">
@@ -39,7 +39,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="main">
-        <div className="welcome">
+        <div className="overlay welcome">
           <h1>Welcome.</h1>
           <p>Press anywhere to increase the counter!</p>
         </div>

@@ -99,31 +99,34 @@ a:hover:after {
     bottom: 20px;
   }
 
-
   .welcome {
     .stretch();
     .center();
-
+    
+    align-items: flex-start;
     z-index: 1;
     background: fade(@mainColor, 90%);
-    font-size: 2em;
     flex-direction: column;
     animation: fadeOut .8s 3s ease forwards, remove .1s 3.8s ease forwards;
   }
 
-  .congrats {
+  .overlay {
     font-size: 2rem;
+    padding: 0 10vw;
 
     h1 {
       font-size: 5rem;
     }
 
     ul {
-      margin: .5em 0;
+      margin: .5em;
+      margin-left: 0;
+
       li {
         list-style: none;
         display: inline-block;
         margin-right: 1em;
+        line-height: 1.5em;
 
         &:last-child {
           margin-right: 0;
