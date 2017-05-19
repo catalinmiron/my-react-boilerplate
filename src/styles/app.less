@@ -3,3 +3,147 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@mainColor: turquoise;
+@textColor: #222;
+
+.stretch() {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: darken(@mainColor, 20%);
+  text-decoration: none;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  font-size: 1.2em;
+}
+
+a:hover {
+  color: @textColor;
+}
+
+a:after {
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  transition: all .4s ease;
+
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: darken(@mainColor, 20%);
+}
+
+a:hover:after {
+  width: 100%;
+  background-color: @textColor;
+  left: 0;
+}
+
+.main {
+  .center();
+
+  background: @mainColor;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  color: @textColor;
+  font-family: monospace;
+
+  .counter {
+    font-size: 20vw;
+    font-weight: bold;
+  }
+
+  button {
+    .stretch();
+
+    width: 100%;
+    text-indent: -999999px;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+  }
+
+  code {
+    background: white;
+    color: @textColor;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 20px;
+  }
+
+
+  .welcome {
+    .stretch();
+    .center();
+
+    z-index: 1;
+    background: fade(@mainColor, 90%);
+    font-size: 2em;
+    flex-direction: column;
+    animation: fadeOut .8s 3s ease forwards, remove .1s 3.8s ease forwards;
+  }
+
+  .congrats {
+    font-size: 2rem;
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    ul {
+      margin: .5em 0;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 1em;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes remove {
+  to {
+    z-index: -1;
+  }
+}
