@@ -1,7 +1,8 @@
 {
-  "name": "hackathon-2017",
+  "name": "my-react-boilerplate",
   "version": "1.0.0",
-  "description": "My awesome react starter kit",
+  "description": "An awesome react boilerplate by @mironcatalin",
+  "GA_TRACKING_CODE": "UA-23679093-13",
   "main": "index.js",
   "scripts": {
     "start": "hjs-dev-server",
