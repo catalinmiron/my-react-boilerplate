@@ -92,9 +92,11 @@ a:hover:after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   z-index: 1;
   background: rgba(64, 224, 208, 0.9);
-  font-size: 2em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -102,21 +104,24 @@ a:hover:after {
   -webkit-animation: fadeOut .8s 3s ease forwards, remove .1s 3.8s ease forwards;
           animation: fadeOut .8s 3s ease forwards, remove .1s 3.8s ease forwards;
 }
-.main .congrats {
+.main .overlay {
   font-size: 2rem;
+  padding: 0 10vw;
 }
-.main .congrats h1 {
+.main .overlay h1 {
   font-size: 5rem;
 }
-.main .congrats ul {
-  margin: .5em 0;
+.main .overlay ul {
+  margin: .5em;
+  margin-left: 0;
 }
-.main .congrats ul li {
+.main .overlay ul li {
   list-style: none;
   display: inline-block;
   margin-right: 1em;
+  line-height: 1.5em;
 }
-.main .congrats ul li:last-child {
+.main .overlay ul li:last-child {
   margin-right: 0;
 }
 @-webkit-keyframes fadeOut {
