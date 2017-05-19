@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: #1aa093;
+  text-decoration: none;
+  transition: all .4s ease;
+  position: relative;
+  height: 1em;
+  line-height: 1em;
+  font-size: 1.2em;
+}
+a:hover {
+  color: #222;
+}
+a:after {
+  transition: all .4s ease;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: #1aa093;
+}
+a:hover:after {
+  width: 100%;
+  background-color: #222;
+  left: 0;
+}
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: turquoise;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #222;
+  font-family: monospace;
+}
+.main .counter {
+  font-size: 20vw;
+  font-weight: bold;
+}
+.main button {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-indent: -999999px;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+.main code {
+  background: white;
+  color: #222;
+  padding: 4px;
+  border-radius: 4px;
+}
+.main footer {
+  position: absolute;
+  bottom: 20px;
+}
+.main .welcome {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  background: rgba(64, 224, 208, 0.9);
+  font-size: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: fadeOut .8s 3s ease forwards, remove .1s 3.8s ease forwards;
+          animation: fadeOut .8s 3s ease forwards, remove .1s 3.8s ease forwards;
+}
+.main .congrats {
+  font-size: 2rem;
+}
+.main .congrats h1 {
+  font-size: 5rem;
+}
+.main .congrats ul {
+  margin: .5em 0;
+}
+.main .congrats ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1em;
+}
+.main .congrats ul li:last-child {
+  margin-right: 0;
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes remove {
+  to {
+    z-index: -1;
+  }
+}
+@keyframes remove {
+  to {
+    z-index: -1;
+  }
+}
