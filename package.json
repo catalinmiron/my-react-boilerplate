@@ -7,8 +7,8 @@
   "scripts": {
     "start": "hjs-dev-server",
     "build": "NODE_ENV=production webpack",
-    "deploy": "npm run build && surge -p dist -d YOUR_DOMAIN.surge.sh",
-    "deploy-gh": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && surge -p dist -d my-react-boilerplate.surge.sh",
+    "deploy-gh": "npm run build && SLEEP 4 && gh-pages -d dist"
   },
   "author": "Catalin Miron",
   "license": "MIT",
