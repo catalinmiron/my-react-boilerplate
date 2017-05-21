@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main 1`] = `
+<div
+  className="main"
+>
+  <div
+    className="overlay welcome"
+  >
+    <h1>
+      Welcome.
+    </h1>
+    <p>
+      Press anywhere to increase the counter!
+    </p>
+  </div>
+  <div
+    className="clicker"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Increment
+    </button>
+    <p
+      className="counter"
+    >
+      0
+    </p>
+  </div>
+  <footer>
+    <p>
+      Change your 
+      <code>
+        app.js
+      </code>
+       file.
+    </p>
+  </footer>
+</div>
+`;
