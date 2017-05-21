@@ -15,6 +15,21 @@ yarn start
 yarn build
 ```
 
+**Running tests with jest**
+
+```
+yarn test
+```
+
+or in watch
+
+```
+yarn test -- --watch
+```
+
+Tests are placed in `__tests__` folder or you can add `{componentName}.test.js` file and `Jest` will run that as well.
+
+
 ### Deployment
 
 **Deploy to Surge.sh**
